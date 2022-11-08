@@ -1,0 +1,22 @@
+/*----------------- UI ---------------------*/
+._title {
+}
+._subtitle {
+}
+/*------------------------------------------*/
+/*---------------- Button ------------------*/
+button {
+	background-color: inherit;
+}
+.button {
+}
+/*------------------------------------------*/
+/*----------------- ibg --------------------*/
+.ibg {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	& img {
+		display: none;
+	}
+}

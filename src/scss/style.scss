@@ -1,0 +1,81 @@
+//---------------- Mixins ----------------
+@import "mixins";
+//-------------- Functions ---------------
+@function px-to-rem($size) {
+	$remValue: ($size / 16) + rem;
+	@return $remValue;
+}
+/*---------------- Fonts ---------------*/
+// @import "fonts";
+// @import "iconfont";
+//------------ Default font --------------
+$fontFamily: "";
+$fz: 16;
+//--------------- Variables --------------
+$unit: px;
+
+$minWidth: 320 + $unit;
+$maxWidth: 1920;
+$maxWidthContainer: 1110;
+
+$xs: 319.98px;
+$sm: 479.98px;
+$md: 766.98px;
+$tab: 991.98px;
+$other: $maxWidthContainer + 12;
+
+$mainColor: #000;
+/*----------- Reset styles -------------*/
+@import "reset.scss";
+/*-------------- Body ------------------*/
+body {
+	font-family: $fontFamily;
+	font-size: $fz + $unit;
+	&._lock {
+		overflow: hidden;
+	}
+}
+/*---------------- Wrapper ----------------*/
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+/*--------------- Container ----------------*/
+._container {
+	max-width: $maxWidthContainer + $unit;
+	margin: 0 auto;
+	@media (max-width: $other) {
+		max-width: 970px;
+	}
+	@media (max-width: $tab) {
+		max-width: 750px;
+	}
+	@media (max-width: $md) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+//------------------ Forms -------------------
+// @import "forms";
+//------------------- UI ---------------------
+@import "ui";
+//----------------- Popup --------------------
+@import "popup";
+//----------------- Header -------------------
+@import "header";
+//----------------- Footer -------------------
+@import "footer.scss";
+//============================================================================================
+/*------------------ Page ------------------*/
+.page {
+	flex: 1 1 auto;
+}
+//============================================================================================
+
+//============================================================================================
+//============================================================================================
+//============================================================================================
+//============================================================================================
