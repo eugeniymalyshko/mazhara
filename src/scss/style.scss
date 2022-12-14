@@ -6,17 +6,18 @@
 	@return $remValue;
 }
 /*---------------- Fonts ---------------*/
-// @import "fonts";
-// @import "iconfont";
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Mulish:wght@400;500&display=swap");
+@import "fonts";
+@import "iconfont";
 //------------ Default font --------------
-$fontFamily: "";
+$fontFamily: "Mulish";
 $fz: 16;
 //--------------- Variables --------------
 $unit: px;
 
 $minWidth: 320 + $unit;
 $maxWidth: 1920;
-$maxWidthContainer: 1110;
+$maxWidthContainer: 1180;
 
 $xs: 319.98px;
 $sm: 479.98px;
@@ -24,13 +25,18 @@ $md: 766.98px;
 $tab: 991.98px;
 $other: $maxWidthContainer + 12;
 
-$mainColor: #000;
-/*----------- Reset styles -------------*/
+$mainColor: #333;
+$backgroundColor: #fff;
+$orangeColor: #ff8823;
+//----------- Reset styles ---------------
 @import "reset.scss";
 /*-------------- Body ------------------*/
 body {
 	font-family: $fontFamily;
 	font-size: $fz + $unit;
+	font-weight: 500;
+	background-color: #fff;
+	color: #333;
 	&._lock {
 		overflow: hidden;
 	}
@@ -44,19 +50,10 @@ body {
 	flex-direction: column;
 }
 /*--------------- Container ----------------*/
-._container {
+[class*="__container"] {
 	max-width: $maxWidthContainer + $unit;
+	padding: 0 15px;
 	margin: 0 auto;
-	@media (max-width: $other) {
-		max-width: 970px;
-	}
-	@media (max-width: $tab) {
-		max-width: 750px;
-	}
-	@media (max-width: $md) {
-		max-width: none;
-		padding: 0 10px;
-	}
 }
 //------------------ Forms -------------------
 // @import "forms";
@@ -69,13 +66,8 @@ body {
 //----------------- Footer -------------------
 @import "footer.scss";
 //============================================================================================
-/*------------------ Page ------------------*/
-.page {
-	flex: 1 1 auto;
-}
-//============================================================================================
 
 //============================================================================================
-//============================================================================================
+
 //============================================================================================
 //============================================================================================
